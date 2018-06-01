@@ -1,8 +1,8 @@
 <?php
 
-$number_random = [3,1,2,5,8,9,6,3,1,4,5,78,55,0,200];
+$random_number = [3,1,2,5,8,9,6,3,1,4,5,78,55,0,200];
 
-print_r(orderingLowHigh($number_random));
+print_r(orderingLowHigh($random_number));
 
 function orderingLowHigh($numbers)
 {
@@ -11,9 +11,9 @@ function orderingLowHigh($numbers)
         for($j = 0; $j < count($numbers); $j++) {
 
             if($numbers[$i] < $numbers[$j]) {
-                $temp = $numbers[$i];
+                $switch_value = $numbers[$i];
                 $numbers[$i] = $numbers[$j];
-                $numbers[$j] = $temp;
+                $numbers[$j] = $switch_value;
             }
         }
     }
