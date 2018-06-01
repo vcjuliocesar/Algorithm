@@ -1,19 +1,22 @@
 <?php
 
-$arreglo = [3,1,2,5,8,9,6,3,1,4,5,78,55,0,200];
+$number_random = [3,1,2,5,8,9,6,3,1,4,5,78,55,0,200];
 
-print_r(Ordering($arreglo));
+print_r(orderingLowHigh($number_random));
 
-function Ordering($array)
+function orderingLowHigh($numbers)
 {
-    for($i = 0; $i < count($array); $i++) {
-        for($j = 0; $j < count($array); $j++) {
-            if($array[$i] < $array[$j]){
-                $temp = $array[$i];
-                $array[$i] = $array[$j];
-                $array[$j] = $temp; 
+    for($i = 0; $i < count($numbers); $i++) {
+
+        for($j = 0; $j < count($numbers); $j++) {
+
+            if($numbers[$i] < $numbers[$j]) {
+                $temp = $numbers[$i];
+                $numbers[$i] = $numbers[$j];
+                $numbers[$j] = $temp;
             }
         }
     }
-    return $array;
+
+    return $numbers;
 }
