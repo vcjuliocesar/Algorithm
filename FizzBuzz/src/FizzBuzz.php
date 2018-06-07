@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace app;
 
 class FizzBuzz {
     private $number;
