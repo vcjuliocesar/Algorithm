@@ -1,41 +1,61 @@
 <?php
 namespace app;
 
+/**
+ * Class FizzBuzz
+ *
+ * @package FizzBuzz
+ * @author Julio Cesar <tu@gmail.com>
+ */
 class FizzBuzz {
+
+    /**
+     * @var integer
+     */
     private $number;
-    private $message;
-    
+
+    /**
+     * FizzBuzz constructor.
+     * @param $number
+     * @type integer
+     */
     public function __construct($number)
     {
         $this->number = $number;
     }
 
-    public function NumberFizzBuzz()
+    /**
+     * @return string
+     */
+    public function convert()
     {
-        for($n=1; $n <= $this->number; $n++) {
-            if($n % 15 == 0) {
-                $this->setMessage("FizzBuzz");
+        $result = '';
+
+        for($i=1; $i <= $this->number; $i++) {
+
+            if ($this->isDivisibleBy($i,15 )) {
+                $result .= 'fizzBuzz'.$i."<br>";
             }
 
-            if($n % 3 == 0){
-                $this->setMessage("Fizz");
+            if ($this->isDivisibleBy($i,3 )) {
+                $result .= 'fizz'.$i."<br>";
             }
-            
-            if($n % 5 == 0){
-                $this->setMessage("Buzz");
+
+            if ($this->isDivisibleBy($i,5)) {
+                $result .= 'buzz'.$i."<br>";
             }
-            $this->setMessage($n);
         }
+
+        return $result;
     }
 
-    private function setMessage($message) 
+    /**
+     * @param  int  $dividend
+     * @param  int  $number
+     * @return boolean
+     */
+    public function isDivisibleBy($number, $dividend)
     {
-        $this->message .= $message."<br>";
+        return $number % $dividend === 0;
     }
-
-    public function PrintMe() 
-    {
-        echo $this->message;
-    }
-
  }
