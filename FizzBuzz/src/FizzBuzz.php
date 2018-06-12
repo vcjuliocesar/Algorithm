@@ -10,7 +10,7 @@ class FizzBuzz {
         $this->number = $number;
     }
 
-    public function NumberFizzBuzz()
+    public function convert()
     {
         for($n=1; $n <= $this->number; $n++) {
             if($n % 15 == 0) {
@@ -33,7 +33,7 @@ class FizzBuzz {
         $this->message .= $message."<br>";
     }
 
-    public function PrintMe() 
+    public function display() 
     {
         echo $this->message;
     }
