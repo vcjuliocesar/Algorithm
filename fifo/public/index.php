@@ -10,4 +10,4 @@ $fifo->addElement('d');
 $fifo->deleteFirstElement();
 
 $fifo->display();
-//var_dump($fifo->render());
+
