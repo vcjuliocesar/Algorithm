@@ -35,7 +35,7 @@ class Fifo
         return null;
     }
 
-    protected function isEmpty()
+    private function isEmpty()
     {
         return ! empty($this->fifo);
     }
@@ -49,7 +49,7 @@ class Fifo
     {
         print_r(['First Element'=>$this->returnFirtElement(),
                  'result'=>$this->render()]
-                );
+        );
     } 
 
 
