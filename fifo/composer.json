@@ -1,0 +1,17 @@
+{
+    "name": "srvur5000n/fifo",
+    "description": "FIFO \u001b[D",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "juliocesar",
+            "email": "julio.valadez@sep.nube.gob.mx"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\":"src/"
+        }
+    }
+}
